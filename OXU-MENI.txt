@@ -1,0 +1,31 @@
+ZENITH — quraşdırma və sinxronlaşma
+
+═══ 1-ci hissə: app-ı internetə qoy (GitHub Pages, pulsuz) ═══
+1) github.com-da hesab aç (adi Gmail-in olar).
+2) Sağ yuxarıda "+" → "New repository". Ad: zenith. "Public" seç → "Create repository".
+3) "uploading an existing file" linkinə bas. Bu qovluqdakı BÜTÜN faylları sürüşdür → "Commit changes".
+4) Settings → Pages → Source: "Deploy from a branch" → Branch: main, / (root) → Save.
+5) 1–2 dəqiqə gözlə. Linkin: https://ISTIFADECI-ADIN.github.io/zenith/
+
+═══ 2-ci hissə: avtomatik sinxronlaşma (Firebase, pulsuz, kart lazım deyil) ═══
+1) console.firebase.google.com → Google hesabınla daxil ol → "Create a project".
+   Ad: zenith. Google Analytics-i söndür → Create.
+2) Authentication → Get started → "Sign-in method" → Email/Password → Enable → Save.
+3) Firestore Database → Create database → yer: eur3 (Europe) → "production mode" → Create.
+4) Firestore → "Rules" → firestore-qaydalari.txt faylındakı mətni hamısını yapışdır → Publish.
+5) Project settings (⚙) → "Your apps" → </> (Web) → ad: zenith → Register app.
+   Göstərilən "const firebaseConfig = { ... };" blokunu kopyala.
+6) GitHub-da zenith repo-da config.js faylını aç → qələm (Edit) →
+   "const firebaseConfig = null;" sətrini kopyaladığın blokla əvəz et → "Commit changes".
+7) 1–2 dəqiqə sonra app-ı aç → Ayarlar → Sinxronlaşma:
+   email + parol yaz → "Hesab yarat". Digər cihazda eyni email/parolla "Daxil ol".
+
+═══ Telefona quraşdırma ═══
+iPhone: linki Safari-də aç → Paylaş → "Ana ekrana əlavə et" → "Open as Web App" açıq → Əlavə et.
+Android: Chrome → ⋮ → "Ana ekrana əlavə et" / "Tətbiqi quraşdır".
+Kompüter: eyni linki Chrome/Edge-də aç.
+
+Qeydlər:
+- İnternet yoxdursa app yenə işləyir, qeydlər sonra özü göndərilir.
+- Eyni günü iki cihazda eyni anda dəyişsən, sonuncu yazılan qalır.
+- Yeni versiya yükləyəndə sw.js-dəki 'zenith-v2' yazısını 'zenith-v3' et.
