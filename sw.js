@@ -1,5 +1,5 @@
 // Zenith offline cache. Bump VERSION when you upload new files.
-const VERSION = 'zenith-v2';
+const VERSION = 'zenith-v3';
 const FILES = ['./', './index.html', './config.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
